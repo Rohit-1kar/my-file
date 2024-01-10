@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main(void)
+{
+ clrscr();
+ char s[]="anagram";
+ char t[]="nagaram";
+ char a[10];
+ int c=sizeof(t);
+ int d=sizeof(s);
+ if(c!=d)
+ {
+  printf("false");
+ }
+ else
+ {
+   for(int i=0;i<c;i++)
+   {
+      for(int j=0;j<d;j++)
+      {
+	 if(s[i]==t[j])
+	 {
+	     a[i]=t[j];
+	 }
+      }
+   }
+   if(strcmp(s,a)==0)
+   {
+      printf("true");
+   }
+   else
+   {
+      printf("false");
+   }
+ }
+  getch();
+}
+
+
