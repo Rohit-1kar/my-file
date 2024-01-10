@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+void main(void)
+{
+ clrscr();
+ int num[]={1,1,1,3,3,4,3,2,4,2};
+ int size=sizeof(num);
+ int a=size/2;
+ for(int i=0;i<a;i++)
+ {
+   for(int j=i;j<a;j++)
+   {
+    if(num[i]==num[j+1])
+    {
+     printf("true");
+     goto back;
+    }
+   }
+ }
+ printf("false");
+ back:
+ getch();
+}
